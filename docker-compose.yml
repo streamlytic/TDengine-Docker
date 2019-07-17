@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  taos:
+    image: taos
+    restart: always
+    ports:
+      - 6020:6020
+      - 6030:6030
+      - 6035:6035
+      - 6030-6039:6030-6039/udp
+    volumes:
+      - ./data:/data
